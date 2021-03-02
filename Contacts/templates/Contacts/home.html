@@ -1,0 +1,13 @@
+{% extends "Contacts/base.html" %}
+{% block content %}
+<p>
+    <ol start= "{{ start_num }}">
+    {% for contact in contacts %}
+
+        <li> {{ contact.name }} - {{ contact.phone_number }} </li>
+    {% endfor %}
+    </ol>
+</p>
+
+    {% include "Contacts/page.html" with page=contacts %}
+{% endblock content %}
